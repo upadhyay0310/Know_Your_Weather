@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Weather App</h1>
+            <div class="tab-container">
+                <p class="tab" data-UserWeather>Your Weather</p>
+                <p class="tab" data-SearchWeather>Search Weather</p>
+            </div>
+
+            <div class="weather-container">
+<!-- Grant Location Access -->
+                <div class="sub-container grant-location-container ">
+                    <img src="./assets/location.png" alt="Location" width="80" height="130" loading="lazy">
+                    <p class="grant">GRANT LOCATION ACCESS</p>
+                    <p>Allow Access to get weather Information</p>
+                    <button class="btn" data-GrantAccess> Grant Access</button>
+                </div>
+<!-- Search Form -> Form Container -->
+                <form  class=" form-container" data-SearchForm >
+                    <input type="text" placeholder="Search for city..." data-SearchInput>
+                    <button class="btn">
+                        <i class="fa-solid fa-magnifying-glass" loading="lazy" ></i>
+                    </button>
+                </form>
+<!-- Loading Screen Container -->
+                <div class=" loadingContainer sub-container">
+                    <img src="assets/Double Ring-1s-200px.gif" alt="Loading" height="120" width="120">
+                    <p>Loading...</p>
+                </div>
+<!-- Show Weather Information -->
+                <div class="sub-container userInfoContainer active">
+                    <div class="name">
+                        <p data-cityName></p>
+                        <img data-countryIcon>
+                    </div>
+
+                    <p data-weatherDescription ></p>
+
+                    <img data-weatherIcon>
+
+                    <p data-Temperature class="data-temp"></p>
+
+                    <div class="parameterContainer " >
+                        <div class="parameter">
+                            <img src="assets/Wind.png" alt="" width="80" height="80">
+                            <p>Windspeed</p>
+                            <p data-WindSpeed></p>
+                        </div>
+                        <div class="parameter">
+                            <img src="assets/humidity-3d-render-icon-illustration-png.webp" alt="" width="80" height="80">
+                            <p>Humidity</p>
+                            <p data-Humidity></p>
+                        </div>
+                        <div class="parameter">
+                            <img src="assets/clouds.png" alt="" width="80" height="80">
+                            <p >Clouds</p>
+                            <p data-Clouds></p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="errorHandlingContainer" data-ErrorHandling>
+                <img src="assets/WhatsApp Image 2023-12-20 at 23.36.50_e060ca9e.jpg" alt="">
+                <p>City Not Found</p>
+            </div>  
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/1909cd7008.js" crossorigin="anonymous"></script>
+</body>
+</html>
