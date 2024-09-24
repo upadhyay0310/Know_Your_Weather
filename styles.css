@@ -7,6 +7,9 @@
 
 
 }
+body{
+    display:flex;
+}
 :root{
     --colorDark1: #112D4E;
     --colorDark2: #3F72AF;
